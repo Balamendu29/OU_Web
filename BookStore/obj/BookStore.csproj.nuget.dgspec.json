@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Web\\Newfolder2\\BookStore\\BookStore.csproj": {}
+    "D:\\School\\Advanced Web Design\\OU_Web\\BookStore\\BookStore.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Web\\Newfolder2\\BookStore\\BookStore.csproj": {
+    "D:\\School\\Advanced Web Design\\OU_Web\\BookStore\\BookStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Web\\Newfolder2\\BookStore\\BookStore.csproj",
+        "projectUniqueName": "D:\\School\\Advanced Web Design\\OU_Web\\BookStore\\BookStore.csproj",
         "projectName": "BookStore",
-        "projectPath": "C:\\Projects\\Web\\Newfolder2\\BookStore\\BookStore.csproj",
-        "packagesPath": "C:\\Users\\balam\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Web\\Newfolder2\\BookStore\\obj\\",
+        "projectPath": "D:\\School\\Advanced Web Design\\OU_Web\\BookStore\\BookStore.csproj",
+        "packagesPath": "C:\\Users\\tomti\\.nuget\\packages\\",
+        "outputPath": "D:\\School\\Advanced Web Design\\OU_Web\\BookStore\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\balam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tomti\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,6 +41,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.9.6, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.2, )"
@@ -85,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
