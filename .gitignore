@@ -73,3 +73,12 @@ _[Ss]cripts
 *.nupkg
 *.ncrunchsolution
 *.dot[Cc]over
+BookStore/BookStore/.vs/BookStore/config/applicationhost.config
+*.config
+BookStore/BookStore/.vs/BookStore/v16/.suo
+*.json
+BookStore/BookStore/bin/Debug/netcoreapp3.1/BookStore.dll
+BookStore/BookStore/bin/Debug/netcoreapp3.1/BookStore.exe
+*.pdb
+BookStore/BookStore/bin/Debug/netcoreapp3.1/BookStore.StaticWebAssets.xml
+*.dll
