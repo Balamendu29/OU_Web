@@ -14,14 +14,18 @@ namespace BookStore.Models
         [Required(ErrorMessage = "Please enter Book title...")]
         [StringLength(50, MinimumLength = 3)]
         [Display(Name = "Title")]
-        public string title { get; set; }
+        public string Title { get; set; }
 
         [Required(ErrorMessage = "Please enter Book Author...")]
         [StringLength(50, MinimumLength = 3)]
-        public string author { get; set; }
+        [Display(Name = "Author")]
+        public string Author { get; set; }
 
-        public int writtenyear { get; set; }
-        public string edition { get; set; }
-        public float price { get; set; }
+        [Display(Name = "Year Written")]
+        public int Writtenyear { get; set; }
+        [Display(Name = "Edition")]
+        public string Edition { get; set; }
+        [Display(Name = "Price")]
+        public float Price { get; set; }
     }
 }

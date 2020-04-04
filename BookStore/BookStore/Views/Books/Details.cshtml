@@ -2,9 +2,11 @@
 @using Microsoft.AspNetCore.Mvc.Localization
 @using System.Globalization
 @using Microsoft.AspNetCore.Localization;
+@using Microsoft.Extensions.Localization;
 
 @inject IViewLocalizer Localizer
-@inject IHtmlLocalizer<SharedResource> SharedLocalizer
+@inject IHtmlLocalizer<SharedResource> SharedHTMLLocalizer
+@inject IStringLocalizer<SharedResource> SharedLocalizer
 @{
     ViewData["Title"] = Localizer["Details"];
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -13,38 +15,38 @@
 <h1>@Localizer["Details"]</h1>
 
 <div>
-    <h4>Book</h4>
+    <h4>Book @SharedLocalizer["Hello"]</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.title)
+            @Html.DisplayNameFor(model => model.Title)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.title)
+            @Html.DisplayFor(model => model.Title)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.author)
+            @Html.DisplayNameFor(model => model.Author)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.author)
+            @Html.DisplayFor(model => model.Author)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.writtenyear)
+            @Html.DisplayNameFor(model => model.Writtenyear)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.writtenyear)
+            @Html.DisplayFor(model => model.Writtenyear)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.edition)
+            @Html.DisplayNameFor(model => model.Edition)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.edition)
+            @Html.DisplayFor(model => model.Edition)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.price)
+            @Html.DisplayNameFor(model => model.Price)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.price)
+            @Html.DisplayFor(model => model.Price)
         </dd>
     </dl>
 </div>
