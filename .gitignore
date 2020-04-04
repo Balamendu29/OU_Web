@@ -132,3 +132,4 @@ BookStore/BookStore/Migrations/20200403003415_CreateIdentitySchema.cs
 BookStore/BookStore/Migrations/20200403003415_CreateIdentitySchema.Designer.cs
 BookStore/BookStore/appsettings.json
 BookStore/BookStore/bin/Debug/netcoreapp3.1/appsettings.json
+BookStore/BookStore/.vs/BookStore/DesignTimeBuild/.dtbcache.v2
