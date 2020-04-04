@@ -9,6 +9,8 @@ using BookStore.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Localization;
+using Microsoft.Extensions.Localization;
+using System.Reflection;
 
 namespace BookStore.Controllers
 {
@@ -19,13 +21,27 @@ namespace BookStore.Controllers
         private readonly BookContext _context;
         private readonly IHtmlLocalizer<BooksController> _localizer;
 
+        private readonly IStringLocalizer _sharedLocalizer;
+        private readonly IStringLocalizer _sharedlocalizer2;
 
-
-        public BooksController(BookContext context, IHtmlLocalizer<BooksController> localizer)
+        public BooksController(BookContext context, IHtmlLocalizer<BooksController> localizer,
+            IStringLocalizerFactory factory)
         {
             _context = context;
             _localizer = localizer;
+            _sharedLocalizer = factory.Create(typeof(SharedResource));
+
+
+                var type = typeof(SharedResource);
+                var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
+                _sharedLocalizer = factory.Create(type);
+                _sharedlocalizer2 = factory.Create("SharedResource", assemblyName.Name);
+
+
+
         }
+
+
 
         // GET: Books
         public async Task<IActionResult> Index()
