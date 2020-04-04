@@ -37,6 +37,7 @@ namespace BookStore
                 .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
                 .AddDataAnnotationsLocalization();
 
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.Configure<RequestLocalizationOptions>(options =>
             {
                 var supportedCultures = new List<CultureInfo>

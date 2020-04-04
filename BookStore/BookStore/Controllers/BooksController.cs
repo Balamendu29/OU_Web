@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BookStore.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Localization;
 
 namespace BookStore.Controllers
 {
@@ -15,10 +17,14 @@ namespace BookStore.Controllers
     {      
 
         private readonly BookContext _context;
+        private readonly IHtmlLocalizer<BooksController> _localizer;
 
-        public BooksController(BookContext context)
+
+
+        public BooksController(BookContext context, IHtmlLocalizer<BooksController> localizer)
         {
             _context = context;
+            _localizer = localizer;
         }
 
         // GET: Books

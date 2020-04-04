@@ -13,6 +13,7 @@ namespace BookStore.Models
 
         [Required(ErrorMessage = "Please enter Book title...")]
         [StringLength(50, MinimumLength = 3)]
+        [Display(Name = "Title")]
         public string title { get; set; }
 
         [Required(ErrorMessage = "Please enter Book Author...")]
