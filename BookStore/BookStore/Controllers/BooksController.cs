@@ -19,16 +19,17 @@ namespace BookStore.Controllers
     {      
 
         private readonly BookContext _context;
-        private readonly IHtmlLocalizer<BooksController> _localizer;
+// private readonly IHtmlLocalizer<BooksController> _localizer;
 
         private readonly IStringLocalizer _sharedLocalizer;
         private readonly IStringLocalizer _sharedlocalizer2;
+        private readonly IStringLocalizer<SharedResource> _sharedlocalizer3;
 
         public BooksController(BookContext context, IHtmlLocalizer<BooksController> localizer,
-            IStringLocalizerFactory factory)
+            IStringLocalizerFactory factory, IStringLocalizer<SharedResource> localizer3)
         {
             _context = context;
-            _localizer = localizer;
+         //   _localizer = localizer;
             _sharedLocalizer = factory.Create(typeof(SharedResource));
 
 
@@ -36,6 +37,7 @@ namespace BookStore.Controllers
                 var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
                 _sharedLocalizer = factory.Create(type);
                 _sharedlocalizer2 = factory.Create("SharedResource", assemblyName.Name);
+                _sharedlocalizer3 = localizer3;
 
 
 
