@@ -3,9 +3,11 @@
 @using Microsoft.AspNetCore.Localization
 @using Microsoft.AspNetCore.Mvc.Localization
 @using Microsoft.Extensions.Options
+@using Microsoft.Extensions.Localization;
 
 @inject IViewLocalizer Localizer
 @inject IOptions<RequestLocalizationOptions> LocOptions
+@inject IStringLocalizer<SharedResource> SharedLocalizer
 
 @{
     var requestCulture = Context.Features.Get<IRequestCultureFeature>();
@@ -43,15 +45,15 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer["Home"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Books" asp-action="Index">Gallery</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Books" asp-action="Index">@SharedLocalizer["Gallery"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@SharedLocalizer["Privacy"]</a>
                         </li>
-                    
+
                     </ul>
                 </div>
                 <div>
@@ -68,13 +70,13 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - B&T BookStore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2020 - B&T BookStore - <a asp-area="" asp-controller="Home" asp-action="Privacy">@SharedLocalizer["Privacy"]</a>
         </div>
         <div title="@Localizer["Request culture provider:"] @requestCulture?.Provider?.GetType().Name">
             <form id="selectLanguage" asp-controller="Home"
                   asp-action="SetLanguage" asp-route-returnUrl="@returnUrl"
                   method="post" class="form-horizontal" role="form">
-                <label asp-for="@requestCulture.RequestCulture.UICulture.Name">@Localizer["Language:"]</label> <select name="culture"
+                <label asp-for="@requestCulture.RequestCulture.UICulture.Name">@SharedLocalizer["Language"]:</label> <select name="culture"
                                                                                                                        onchange="this.form.submit();"
                                                                                                                        asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems">
                 </select>
