@@ -26,6 +26,7 @@ namespace BookStore.Models
         [Display(Name = "Edition")]
         public string Edition { get; set; }
         [Display(Name = "Price")]
+        [DataType(DataType.Currency)]
         public float Price { get; set; }
     }
 }

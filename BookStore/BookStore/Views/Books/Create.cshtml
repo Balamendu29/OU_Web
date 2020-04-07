@@ -1,13 +1,18 @@
-﻿@model BookStore.Models.Book
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization;
+
+@inject IViewLocalizer Localizer
+@inject IStringLocalizer<SharedResource> SharedLocalizer
+@model BookStore.Models.Book
 
 @{
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Create</h1>
+<h1>@SharedLocalizer["Create"]</h1>
 
-<h4>Book</h4>
+<h4>@SharedLocalizer["Book"]</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -46,7 +51,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">@SharedLocalizer["Back to List"]</a>
 </div>
 
 @section Scripts {
