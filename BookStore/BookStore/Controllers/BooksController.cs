@@ -11,36 +11,35 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Localization;
 using Microsoft.Extensions.Localization;
 using System.Reflection;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 namespace BookStore.Controllers
 {
-    [Authorize]
     public class BooksController : Controller
-    {      
-
+    {
         private readonly BookContext _context;
-// private readonly IHtmlLocalizer<BooksController> _localizer;
+        private readonly IWebHostEnvironment _hostEnvironment;
+        // private readonly IHtmlLocalizer<BooksController> _localizer;
 
         private readonly IStringLocalizer _sharedLocalizer;
         private readonly IStringLocalizer _sharedlocalizer2;
         private readonly IStringLocalizer<SharedResource> _sharedlocalizer3;
 
-        public BooksController(BookContext context, IHtmlLocalizer<BooksController> localizer,
+        public BooksController(BookContext context, IWebHostEnvironment hostEnvironment,IHtmlLocalizer<BooksController> localizer,
             IStringLocalizerFactory factory, IStringLocalizer<SharedResource> localizer3)
         {
             _context = context;
-         //   _localizer = localizer;
+            this._hostEnvironment = hostEnvironment;
+            //   _localizer = localizer;
             _sharedLocalizer = factory.Create(typeof(SharedResource));
 
 
-                var type = typeof(SharedResource);
-                var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
-                _sharedLocalizer = factory.Create(type);
-                _sharedlocalizer2 = factory.Create("SharedResource", assemblyName.Name);
-                _sharedlocalizer3 = localizer3;
-
-
-
+            var type = typeof(SharedResource);
+            var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
+            _sharedLocalizer = factory.Create(type);
+            _sharedlocalizer2 = factory.Create("SharedResource", assemblyName.Name);
+            _sharedlocalizer3 = localizer3;           
         }
 
 
@@ -80,10 +79,23 @@ namespace BookStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,title,author,writtenyear,edition,price")] Book book)
+        public async Task<IActionResult> Create([Bind("Id,Title,Author,Writtenyear,Edition,Price,CreatedDate")] Book book)
         {
             if (ModelState.IsValid)
             {
+                ////save image to wwwroot/images
+                //string wwwRootPath = _hostEnvironment.WebRootPath;
+                //string fileName = Path.GetFileNameWithoutExtension(book.ImageFile.FileName);
+                //string extension = Path.GetExtension(book.ImageFile.FileName);
+                //book.ImageName = fileName + extension;
+                //string path = Path.Combine(wwwRootPath + "/images/", fileName);
+
+                //using (var fileStream = new FileStream(path, FileMode.Create))
+                //{
+                //    await book.ImageFile.CopyToAsync(fileStream);
+                //}
+
+                //insert record
                 _context.Add(book);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -112,7 +124,7 @@ namespace BookStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,title,author,writtenyear,edition,price")] Book book)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Author,Writtenyear,Edition,Price,CreatedDate")] Book book)
         {
             if (id != book.Id)
             {

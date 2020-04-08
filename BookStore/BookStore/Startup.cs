@@ -41,10 +41,10 @@ namespace BookStore
             services.Configure<RequestLocalizationOptions>(options =>
             {
                 var supportedCultures = new List<CultureInfo>
-                    {
+                {
                         new CultureInfo("en-US"),
-                        new CultureInfo("fr")
-                    };
+                        new CultureInfo("fr"),
+                };
 
                 options.DefaultRequestCulture = new RequestCulture("en-US");
                 options.SupportedCultures = supportedCultures;

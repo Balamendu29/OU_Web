@@ -42,9 +42,9 @@ html {
   template {
     display: none;
   }
-  a {
+a {
     background-color: transparent;
-  }
+}
   a:active,
   a:hover {
     outline: 0;
