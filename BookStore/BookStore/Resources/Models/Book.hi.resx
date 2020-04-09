@@ -118,21 +118,21 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Author" xml:space="preserve">
-    <value>Auteure</value>
+    <value>लेखक</value>
   </data>
   <data name="CreatedDate" xml:space="preserve">
-    <value>Date de création</value>
+    <value>रचना तिथि</value>
   </data>
   <data name="Edition" xml:space="preserve">
-    <value>Édition</value>
+    <value>संस्करण</value>
   </data>
   <data name="Price" xml:space="preserve">
-    <value>Prix</value>
+    <value>कीमत</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Titre</value>
+    <value>शीर्षक</value>
   </data>
   <data name="Year Written" xml:space="preserve">
-    <value>Année écrite</value>
+    <value>साल लिखा गया</value>
   </data>
 </root>

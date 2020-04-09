@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Http;
 
 namespace BookStore.Models
 {
@@ -14,11 +16,11 @@ namespace BookStore.Models
         [Required(ErrorMessage = "Please enter Book title...")]
         [StringLength(50, MinimumLength = 3)]
         [Display(Name = "Title")]
-        [RegularExpression("^[a-zA-Z0-9]*$", ErrorMessage = "Only Alphabets and Numbers allowed.")]
+        [RegularExpression("^[a-zA-Z0-9 ]*$", ErrorMessage = "Only Alphabets and Numbers allowed.")]
         public string Title { get; set; }
 
         [Required(ErrorMessage = "Please enter Book Author...")]
-        [RegularExpression("^[a-zA-Z0-9]*$", ErrorMessage = "Only Alphabets and Numbers allowed.")]
+        [RegularExpression("^[a-zA-Z0-9 ]*$", ErrorMessage = "Only Alphabets and Numbers allowed.")]
         [StringLength(30)]
         [Display(Name = "Author")]
         public string Author { get; set; }
@@ -32,7 +34,7 @@ namespace BookStore.Models
         public int Writtenyear { get; set; }
 
         [Required(ErrorMessage = "Please enter Book Edition...")]
-        [RegularExpression("^[a-zA-Z0-9]*$", ErrorMessage = "Only Alphabets and Numbers allowed.")]
+        [RegularExpression("^[a-zA-Z0-9 ]*$", ErrorMessage = "Only Alphabets and Numbers allowed.")]
         [Display(Name = "Edition")]
         public string Edition { get; set; }
 
@@ -45,10 +47,11 @@ namespace BookStore.Models
         public DateTime CreatedDate { get { return _date; } set { _date = value; } }
         //public DateTime CreatedDate { get; set; }
 
-        //public string ImageName { get; set; }
+        [Display(Name = "Image File")]
+        public string imagepath { get; set; }
 
-        //[NotMapped]
-        //[DisplayName("Upload FIle")]
-        //public IFormFile ImageFile { get; set; }
+        [NotMapped]
+        [Display(Name = "Upload ImageFile")]
+        public IFormFile imagefile { get; set; }
     }
 }

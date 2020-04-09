@@ -1,12 +1,22 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}    
+﻿@model BookStore.Models.Book
+@using Microsoft.AspNetCore.Mvc.Localization
+@using System.Globalization
+@using Microsoft.AspNetCore.Localization;
+@using Microsoft.Extensions.Localization;
 
-    <div class="text-center">
-        <h1 class="display-4">Welcome to B&T BookStore</h1>
-        @*<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
-        <img src="/images/igallery5.webp" style="width:100%" />
+@inject IViewLocalizer Localizer
 
-    </div>
-    
-    
+@inject IStringLocalizer<SharedResource> SharedLocalizer
+@{
+    ViewData["Title"] = Localizer["Home Page"];
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@SharedLocalizer["Welcome to B&T BookStore"]</h1>
+    @*<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
+    <img src="/images/igallery5.webp" style="width:100%" />
+
+</div>
+
+

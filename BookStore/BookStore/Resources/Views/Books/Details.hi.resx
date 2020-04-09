@@ -117,22 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Author" xml:space="preserve">
-    <value>Auteure</value>
-  </data>
-  <data name="CreatedDate" xml:space="preserve">
-    <value>Date de création</value>
-  </data>
-  <data name="Edition" xml:space="preserve">
-    <value>Édition</value>
-  </data>
-  <data name="Price" xml:space="preserve">
-    <value>Prix</value>
-  </data>
-  <data name="Title" xml:space="preserve">
-    <value>Titre</value>
-  </data>
-  <data name="Year Written" xml:space="preserve">
-    <value>Année écrite</value>
+  <data name="Details" xml:space="preserve">
+    <value>विवरण</value>
   </data>
 </root>

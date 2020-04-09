@@ -159,4 +159,7 @@
   <data name="Save" xml:space="preserve">
     <value>sauvegarder</value>
   </data>
+  <data name="Welcome to B&amp;T BookStore" xml:space="preserve">
+    <value>bienvenue à la librairie B&amp;T</value>
+  </data>
 </root>

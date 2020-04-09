@@ -11,6 +11,8 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Localization;
 using Microsoft.Extensions.Localization;
 using System.Reflection;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 namespace BookStore.Controllers
 {
@@ -19,17 +21,21 @@ namespace BookStore.Controllers
     {      
 
         private readonly BookContext _context;
-// private readonly IHtmlLocalizer<BooksController> _localizer;
+        // private readonly IHtmlLocalizer<BooksController> _localizer;
 
         private readonly IStringLocalizer _sharedLocalizer;
         private readonly IStringLocalizer _sharedlocalizer2;
+        private readonly IStringLocalizer _sharedlocalizer4;
         private readonly IStringLocalizer<SharedResource> _sharedlocalizer3;
 
-        public BooksController(BookContext context, IHtmlLocalizer<BooksController> localizer,
+        private readonly IWebHostEnvironment _hostenvironment; 
+
+        public BooksController(BookContext context, IWebHostEnvironment hostenvironment, IHtmlLocalizer<BooksController> localizer,
             IStringLocalizerFactory factory, IStringLocalizer<SharedResource> localizer3)
         {
             _context = context;
-         //   _localizer = localizer;
+            //this._hostenvironment = hostenvironment;
+            //   _localizer = localizer;
             _sharedLocalizer = factory.Create(typeof(SharedResource));
 
 
@@ -38,12 +44,10 @@ namespace BookStore.Controllers
                 _sharedLocalizer = factory.Create(type);
                 _sharedlocalizer2 = factory.Create("SharedResource", assemblyName.Name);
                 _sharedlocalizer3 = localizer3;
-
-
-
+           
+            _sharedlocalizer4 = factory.Create("SharedResource", assemblyName.Name);
+            _sharedlocalizer3 = localizer3;
         }
-
-
 
         // GET: Books
         public async Task<IActionResult> Index()
@@ -84,6 +88,17 @@ namespace BookStore.Controllers
         {
             if (ModelState.IsValid)
             {
+                //save image to wwwroot/images
+                string wwwRootPath = _hostenvironment.WebRootPath;
+                string fileName = Path.GetFileNameWithoutExtension(book.imagefile.FileName);
+                string extension = Path.GetExtension(book.imagefile.FileName);
+                book.imagepath = fileName = fileName + DateTime.Now.ToString("yymmss") + extension;
+                string path = Path.Combine(wwwRootPath + "/images/", fileName);
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await book.imagefile.CopyToAsync(fileStream);
+                }
+
                 _context.Add(book);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
