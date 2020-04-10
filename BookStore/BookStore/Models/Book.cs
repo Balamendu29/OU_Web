@@ -45,6 +45,8 @@ namespace BookStore.Models
         public decimal Price { get; set; }
 
         private DateTime _date = DateTime.Now;
+        [DataType(DataType.Date)]
+        [Display(Name ="Created Date")]
         public DateTime CreatedDate { get { return _date; } set { _date = value; } }
         //public DateTime CreatedDate { get; set; }
 
