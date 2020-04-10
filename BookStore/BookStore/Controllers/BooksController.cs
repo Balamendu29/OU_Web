@@ -13,6 +13,7 @@ using Microsoft.Extensions.Localization;
 using System.Reflection;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
+using System.Net.Http;
 
 namespace BookStore.Controllers
 {
@@ -23,36 +24,40 @@ namespace BookStore.Controllers
         private readonly BookContext _context;
         // private readonly IHtmlLocalizer<BooksController> _localizer;
 
-        private readonly IStringLocalizer _sharedLocalizer;
-        private readonly IStringLocalizer _sharedlocalizer2;
-        private readonly IStringLocalizer _sharedlocalizer4;
-        private readonly IStringLocalizer<SharedResource> _sharedlocalizer3;
+        private readonly IStringLocalizer<SharedResource> _sharedLocalizer;
+        //private readonly IStringLocalizer _sharedlocalizer2;
+        //private readonly IStringLocalizer _sharedlocalizer4;
+        //private readonly IStringLocalizer<SharedResource> _sharedlocalizer3;
 
         private readonly IWebHostEnvironment _hostenvironment; 
 
-        public BooksController(BookContext context, IWebHostEnvironment hostenvironment, IHtmlLocalizer<BooksController> localizer,
-            IStringLocalizerFactory factory, IStringLocalizer<SharedResource> localizer3)
+        public BooksController(BookContext context, IWebHostEnvironment hostenvironment,
+             IStringLocalizer<SharedResource> sharedLocalizer)
         {
             _context = context;
             //this._hostenvironment = hostenvironment;
             //   _localizer = localizer;
-            _sharedLocalizer = factory.Create(typeof(SharedResource));
+            _sharedLocalizer = sharedLocalizer;
 
 
                 var type = typeof(SharedResource);
                 var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
-                _sharedLocalizer = factory.Create(type);
-                _sharedlocalizer2 = factory.Create("SharedResource", assemblyName.Name);
-                _sharedlocalizer3 = localizer3;
+                //_sharedLocalizer = factory.Create(type);
+                //_sharedlocalizer2 = factory.Create("SharedResource", assemblyName.Name);
+                //_sharedlocalizer3 = localizer3;
+               
            
-            _sharedlocalizer4 = factory.Create("SharedResource", assemblyName.Name);
-            _sharedlocalizer3 = localizer3;
+            //_sharedlocalizer4 = factory.Create("SharedResource", assemblyName.Name);
+            //_sharedlocalizer3 = localizer3;
+            _hostenvironment = hostenvironment;
         }
 
         // GET: Books
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Books.ToListAsync());
+            var books = await _context.Books.ToListAsync();
+            //books.ForEach(book => book.Price = CurrencyConversion(book.Price));
+            return View(books);
         }
 
         // GET: Books/Details/5
@@ -84,21 +89,25 @@ namespace BookStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,title,author,writtenyear,edition,price,CreatedDate")] Book book)
+        //public async Task<IActionResult> Create([Bind("Id,title,author,writtenyear,edition,price,CreatedDate")] Book book)
+        public async Task<IActionResult> Create(Book book)
         {
             if (ModelState.IsValid)
             {
                 //save image to wwwroot/images
                 string wwwRootPath = _hostenvironment.WebRootPath;
-                string fileName = Path.GetFileNameWithoutExtension(book.imagefile.FileName);
-                string extension = Path.GetExtension(book.imagefile.FileName);
-                book.imagepath = fileName = fileName + DateTime.Now.ToString("yymmss") + extension;
-                string path = Path.Combine(wwwRootPath + "/images/", fileName);
-                using (var fileStream = new FileStream(path, FileMode.Create))
+                string fileName = book.imagefile?.FileName != null ? Path.GetFileNameWithoutExtension(book.imagefile.FileName) : string.Empty;
+                string extension = book.imagefile?.FileName != null ? Path.GetExtension(book.imagefile.FileName) : string.Empty;
+                if (!string.IsNullOrEmpty(fileName) && !string.IsNullOrEmpty(extension))
                 {
-                    await book.imagefile.CopyToAsync(fileStream);
-                }
+                    book.imagepath = fileName = fileName + DateTime.Now.ToString("yymmss") + extension;
 
+                    string path = Path.Combine(wwwRootPath + "/images/", fileName);
+                    using (var fileStream = new FileStream(path, FileMode.Create))
+                    {
+                        await book.imagefile.CopyToAsync(fileStream);
+                    }
+                }
                 _context.Add(book);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -191,5 +200,17 @@ namespace BookStore.Controllers
         {
             return _context.Books.Any(e => e.Id == id);
         }
+        //private decimal CurrencyConversion(decimal price)
+        //{
+            //string fromCurrency = "USD";
+            //string toCurrency = "EURO";
+            //string url2 = url: "https://query.yahooapis.com/v1/public/yql?q=select%20rate%2Cname%20from%20csv%20where%20url%3D'http%3A%2F%2Fdownload.finance.yahoo.com%2Fd%2Fquotes%3Fs%3D" + from_currency + to_currency + "%253DX%26f%3Dl1n'%20and%20columns%3D'rate%2Cname'&format=json",
+   
+            //string url = string.Format("https://www.google.com/finance/converter?fromCurrency={0}&toCurrency={1}", fromCurrency.ToUpper(), toCurrency.ToUpper(), price);
+            //var client = new HttpClient();
+            //var response = client.GetAsync(url).Result;
+            //var content = response.Content.ReadAsStringAsync().Result;
+          //  return decimal.Parse(content);
+        //}
     }
 }

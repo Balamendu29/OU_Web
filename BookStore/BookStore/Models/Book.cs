@@ -42,6 +42,7 @@ namespace BookStore.Models
         //[RegularExpression("^[0-9]*$.", ErrorMessage = "Only Numbers allowed.")]
         [DataType(DataType.Currency)]
         [Column(TypeName = "decimal(18,2)")]
+        //[DisplayFormat(DataFormatString = Book.test())]
         public decimal Price { get; set; }
 
         private DateTime _date = DateTime.Now;
@@ -56,5 +57,6 @@ namespace BookStore.Models
         [NotMapped]
         [Display(Name = "Upload ImageFile")]
         public IFormFile imagefile { get; set; }
+
     }
 }
