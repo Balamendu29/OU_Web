@@ -79,3 +79,8 @@ body {
 .book-list tr td:nth-child(5) { /* I don't think they are 0 based */
     text-align: right;
 }
+
+label.required::after {
+    color:red; 
+    content:'*';
+}
