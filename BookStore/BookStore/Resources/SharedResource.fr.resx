@@ -120,6 +120,9 @@
   <data name="Are you sure you want to delete this?" xml:space="preserve">
     <value>Voulez-vous vraiment supprimer cela?</value>
   </data>
+  <data name="B&amp;T BookStore" xml:space="preserve">
+    <value>Librairie B&amp;T</value>
+  </data>
   <data name="Back to List" xml:space="preserve">
     <value>Retour à la liste</value>
   </data>
@@ -152,6 +155,9 @@
   </data>
   <data name="List of Books" xml:space="preserve">
     <value>Liste de livres</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Se déconnecter</value>
   </data>
   <data name="Privacy" xml:space="preserve">
     <value>Intimité</value>

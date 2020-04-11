@@ -117,25 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Author" xml:space="preserve">
-    <value>Auteure</value>
+  <data name="Are you sure you want to delete this?" xml:space="preserve">
+    <value>మీరు దీన్ని ఖచ్చితంగా తొలగించాలనుకుంటున్నారా?</value>
   </data>
-  <data name="Created Date" xml:space="preserve">
-    <value>Date de création</value>
+  <data name="B&amp;T BookStore" xml:space="preserve">
+    <value>బి అండ్ టి బుక్‌స్టోర్</value>
   </data>
-  <data name="Edition" xml:space="preserve">
-    <value>Édition</value>
+  <data name="Back to List" xml:space="preserve">
+    <value>జాబితాకు తిరిగి వెళ్ళు</value>
   </data>
-  <data name="Price" xml:space="preserve">
-    <value>Prix</value>
+  <data name="Book" xml:space="preserve">
+    <value>పుస్తకం</value>
   </data>
-  <data name="Title" xml:space="preserve">
-    <value>Titre</value>
+  <data name="Create New" xml:space="preserve">
+    <value>క్రొత్తదాన్ని సృష్టించండి</value>
   </data>
-  <data name="Upload ImageFile" xml:space="preserve">
-    <value>télécharger un fichier image</value>
+  <data name="Delete" xml:space="preserve">
+    <value>తొలగించు</value>
   </data>
-  <data name="Year Written" xml:space="preserve">
-    <value>Année écrite</value>
+  <data name="Details" xml:space="preserve">
+    <value>వివరాలు</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>మార్చు</value>
+  </data>
+  <data name="Gallery" xml:space="preserve">
+    <value>గ్యాలరీ</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>హలో</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>హోమ్</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>భాషా</value>
+  </data>
+  <data name="List of Books" xml:space="preserve">
+    <value>పుస్తకాల జాబితా</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>లాగౌట్</value>
+  </data>
+  <data name="Privacy" xml:space="preserve">
+    <value>గోప్యతా</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>సేవ్</value>
+  </data>
+  <data name="Welcome to B&amp;T BookStore" xml:space="preserve">
+    <value>బి అండ్ టి బుక్‌స్టోర్‌కు స్వాగతం</value>
   </data>
 </root>

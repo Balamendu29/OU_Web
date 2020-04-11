@@ -19,13 +19,6 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.imagefile)
-        </dt>
-        <dd class="col-sm-10">
-           @* @Html.DisplayFor(model => model.imagefile)*@
-            <img src="@("~/images/" + Model.imagepath)" asp-append-version="true" width="250px" height="250px"/>
-        </dd>
-        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Title)
         </dt>
         <dd class="col-sm-10">

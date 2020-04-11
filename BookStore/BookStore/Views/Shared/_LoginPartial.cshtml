@@ -16,7 +16,7 @@
         </li>
         <li class="nav-item">
             <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                <button id="logout" type="submit" class="nav-link btn btn-link text-dark" style=" background-color: deepskyblue;border: 1px;display: block;font-weight: bold;">Logout</button>
+                <button id="logout" type="submit" class="nav-link btn btn-link text-dark" style=" background-color: deepskyblue;border: 1px;display: block;font-weight: bold;">@SharedHTMLLocalizer["Logout"]</button>
             </form>
         </li>
     }

@@ -120,6 +120,9 @@
   <data name="Are you sure you want to delete this?" xml:space="preserve">
     <value>क्या आप वाकई इसे हटाना चाहते हैं?</value>
   </data>
+  <data name="B&amp;T BookStore" xml:space="preserve">
+    <value>बी &amp; टी बुकस्टोर</value>
+  </data>
   <data name="Back to List" xml:space="preserve">
     <value>दोबारा सूची को जाएं</value>
   </data>
@@ -153,13 +156,19 @@
   <data name="List of Books" xml:space="preserve">
     <value>पुस्तकों की सूची</value>
   </data>
+  <data name="Logout" xml:space="preserve">
+    <value>लॉग आउट</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>कुंजिका</value>
+  </data>
   <data name="Privacy" xml:space="preserve">
     <value>एकांत</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>सहेजें</value>
   </data>
-  <data name="welcome to B&amp;T Bookstore" xml:space="preserve">
-    <value>B &amp; T बुकस्टोर में आपका स्वागत है</value>
+  <data name="Welcome to B&amp;T BookStore" xml:space="preserve">
+    <value>बी &amp; टी बुकस्टोर में आपका स्वागत है</value>
   </data>
 </root>

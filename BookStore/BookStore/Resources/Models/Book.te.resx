@@ -118,24 +118,24 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Author" xml:space="preserve">
-    <value>Auteure</value>
+    <value>రచయిత</value>
   </data>
   <data name="Created Date" xml:space="preserve">
-    <value>Date de création</value>
+    <value>సృష్టించిన తేదీ</value>
   </data>
   <data name="Edition" xml:space="preserve">
-    <value>Édition</value>
+    <value>ఎడిషన్</value>
   </data>
   <data name="Price" xml:space="preserve">
-    <value>Prix</value>
+    <value>ధర</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Titre</value>
+    <value>శీర్షిక</value>
   </data>
   <data name="Upload ImageFile" xml:space="preserve">
-    <value>télécharger un fichier image</value>
+    <value>చిత్రం అప్‌లోడ్ </value>
   </data>
   <data name="Year Written" xml:space="preserve">
-    <value>Année écrite</value>
+    <value>వ్రాసిన సంవత్సరం</value>
   </data>
 </root>

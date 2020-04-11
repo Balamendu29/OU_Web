@@ -44,7 +44,8 @@ namespace BookStore
                     {
                         new CultureInfo("en-US"),
                         new CultureInfo("fr"),
-                        new CultureInfo("hi-IN")
+                        new CultureInfo("hi-IN"),
+                        new CultureInfo("te-IN")
                     };
 
                 options.DefaultRequestCulture = new RequestCulture("en-US");
