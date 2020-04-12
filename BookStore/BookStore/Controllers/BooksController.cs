@@ -41,8 +41,8 @@ namespace BookStore.Controllers
             _sharedLocalizer = sharedLocalizer;
 
 
-                var type = typeof(SharedResource);
-                var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
+                //var type = typeof(SharedResource);
+                //var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
                 //_sharedLocalizer = factory.Create(type);
                 //_sharedlocalizer2 = factory.Create("SharedResource", assemblyName.Name);
                 //_sharedlocalizer3 = localizer3;

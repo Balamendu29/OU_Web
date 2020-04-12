@@ -8,6 +8,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.AspNetCore.Builder;
+using System.Collections.Generic;
+using Microsoft.Extensions.Options;
+
 [assembly: HostingStartup(typeof(BookStore.Areas.Identity.IdentityHostingStartup))]
 namespace BookStore.Areas.Identity
 {
@@ -28,7 +35,11 @@ namespace BookStore.Areas.Identity
 
                 })
                     .AddEntityFrameworkStores<UserAuthDBContext>();
+
+                
             });
+
+
         }
     }
 }
