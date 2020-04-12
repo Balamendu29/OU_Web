@@ -120,6 +120,9 @@
   <data name="Author" xml:space="preserve">
     <value>Auteure</value>
   </data>
+  <data name="Book title is required." xml:space="preserve">
+    <value>Le titre du livre est requis.</value>
+  </data>
   <data name="Created Date" xml:space="preserve">
     <value>Date de création</value>
   </data>

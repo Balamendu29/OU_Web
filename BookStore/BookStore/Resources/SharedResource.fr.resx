@@ -183,6 +183,9 @@
   <data name="Privacy" xml:space="preserve">
     <value>Intimité</value>
   </data>
+  <data name="Privacy Policy" xml:space="preserve">
+    <value>Politique de confidentialité</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>S'inscrire</value>
   </data>
@@ -200,6 +203,9 @@
   </data>
   <data name="The Password field is required." xml:space="preserve">
     <value>Le champ Mot de passe est obligatoire.</value>
+  </data>
+  <data name="Use this page to detail your site's privacy policy." xml:space="preserve">
+    <value>Utilisez cette page pour détailler la politique de confidentialité de votre site.</value>
   </data>
   <data name="Welcome to B&amp;T BookStore" xml:space="preserve">
     <value>bienvenue à la librairie B&amp;T</value>

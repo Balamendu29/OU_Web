@@ -13,7 +13,8 @@ namespace BookStore.Models
         [Key]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Please enter Book title...")]
+        [Required(ErrorMessage = "Book title is required.")]
+        //[Required(ErrorMessageResourceName = "TitleRequired", ErrorMessageResourceType = typeof(Book))]
         [StringLength(50, MinimumLength = 3)]
         [Display(Name = "Title")]
         [RegularExpression("^[a-zA-Z0-9 ]*$", ErrorMessage = "Only Alphabets and Numbers allowed.")]
