@@ -44,10 +44,10 @@ namespace BookStore.Controllers
 
         // GET: Books
         public async Task<IActionResult> Index()
-        {
+        { 
             var books = await _context.Books.ToListAsync();
             books.ForEach(book => book.Price = CurrencyConversion(book.Price));
-            return View(books);
+            return View(books.OrderBy(x => x.Title));
         }
 
         // GET: Books/Details/5

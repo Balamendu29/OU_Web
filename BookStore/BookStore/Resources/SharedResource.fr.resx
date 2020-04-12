@@ -132,6 +132,9 @@
   <data name="Confirm Password" xml:space="preserve">
     <value>Confirmez le mot de passe</value>
   </data>
+  <data name="Create" xml:space="preserve">
+    <value>Créer</value>
+  </data>
   <data name="Create New" xml:space="preserve">
     <value>Créer un nouveau</value>
   </data>
