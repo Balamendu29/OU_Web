@@ -129,6 +129,9 @@
   <data name="Book" xml:space="preserve">
     <value>Livre</value>
   </data>
+  <data name="Confirm Password" xml:space="preserve">
+    <value>Confirmez le mot de passe</value>
+  </data>
   <data name="Create New" xml:space="preserve">
     <value>Créer un nouveau</value>
   </data>
@@ -144,6 +147,9 @@
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
+  <data name="First Name" xml:space="preserve">
+    <value>Prénom</value>
+  </data>
   <data name="Gallery" xml:space="preserve">
     <value>Galerie</value>
   </data>
@@ -156,8 +162,17 @@
   <data name="Language" xml:space="preserve">
     <value>Langue</value>
   </data>
+  <data name="Last Name" xml:space="preserve">
+    <value>Nom de famille</value>
+  </data>
   <data name="List of Books" xml:space="preserve">
     <value>Liste de livres</value>
+  </data>
+  <data name="Log In" xml:space="preserve">
+    <value>Se connecter</value>
+  </data>
+  <data name="Log out" xml:space="preserve">
+    <value>Se déconnecter</value>
   </data>
   <data name="Logout" xml:space="preserve">
     <value>Se déconnecter</value>
@@ -168,22 +183,28 @@
   <data name="Privacy" xml:space="preserve">
     <value>Intimité</value>
   </data>
+  <data name="Register" xml:space="preserve">
+    <value>S'inscrire</value>
+  </data>
   <data name="Register as a new user" xml:space="preserve">
     <value>S'inscrire en tant que nouvel utilisateur</value>
   </data>
+  <data name="Remember me?" xml:space="preserve">
+    <value>Souviens-toi de moi?</value>
+  </data>
   <data name="Save" xml:space="preserve">
-    <value>sauvegarder</value>
+    <value>S'identifier</value>
   </data>
-  <data name="Sign-In" xml:space="preserve">
-    <value>Se connecter</value>
+  <data name="The FirstName field is required." xml:space="preserve">
+    <value>Le champ Prénom est obligatoire.</value>
   </data>
-  <data name="Sign-Up" xml:space="preserve">
-    <value>S'inscrire</value>
-  </data>
-  <data name="String1" xml:space="preserve">
-    <value>Mot de passe</value>
+  <data name="The Password field is required." xml:space="preserve">
+    <value>Le champ Mot de passe est obligatoire.</value>
   </data>
   <data name="Welcome to B&amp;T BookStore" xml:space="preserve">
     <value>bienvenue à la librairie B&amp;T</value>
+  </data>
+  <data name="You have successfully logged out of the application." xml:space="preserve">
+    <value>Vous avez réussi à vous déconnecter de l'application.</value>
   </data>
 </root>

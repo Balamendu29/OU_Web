@@ -1,10 +1,18 @@
 ﻿@page
+
+@using Microsoft.AspNetCore.Mvc.Localization
+@using System.Globalization
+@using Microsoft.AspNetCore.Localization;
+@using Microsoft.Extensions.Localization;
+@using BookStore
+@inject IStringLocalizer<SharedResource> SharedLocalizer
+
 @model LogoutModel
 @{
     ViewData["Title"] = "Log out";
 }
 
 <header>
-    <h1>@ViewData["Title"]</h1>
-    <p>You have successfully logged out of the application.</p>
+    <h1>@SharedLocalizer["Log out"]</h1>
+    <p>@SharedLocalizer["You have successfully logged out of the application."]</p>
 </header>
