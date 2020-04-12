@@ -23,11 +23,7 @@ namespace BookStore.Controllers
     {      
 
         private readonly BookContext _context;
-
-
         private readonly IStringLocalizer<SharedResource> _sharedLocalizer;
-
-
         private readonly IWebHostEnvironment _hostenvironment;
 
         public BooksController(BookContext context, IWebHostEnvironment hostenvironment,
@@ -36,10 +32,6 @@ namespace BookStore.Controllers
             _context = context;
             this._hostenvironment = hostenvironment;
             _sharedLocalizer = sharedLocalizer;
-                //var type = typeof(SharedResource);
-                //var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
-                //_sharedLocalizer = factory.Create(type);
-
         }
 
         // GET: Books
