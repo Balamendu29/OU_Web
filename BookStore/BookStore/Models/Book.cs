@@ -28,7 +28,7 @@ namespace BookStore.Models
 
         [Required(ErrorMessage = "Year Written is required, for example 2020.")]
         //[StringLength(4)]
-        [RegularExpression("^[12][0-9]{3}$", ErrorMessage = "Year must be numeric with 4-digits from 1000 to 2999. For example 2020")]
+        [RegularExpression("^[12][0-9]{3}$", ErrorMessage = "Year must be numeric with 4-digits from 1000 to current year. For example 2020")]
         //[DisplayFormat(DataFormatString = "{0:yyyy}")]
         //[DataType(DataType.Date)]
         [Display(Name = "Year Written")]

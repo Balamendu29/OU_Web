@@ -129,6 +129,9 @@
   <data name="Book" xml:space="preserve">
     <value>किताब</value>
   </data>
+  <data name="Confirm Password" xml:space="preserve">
+    <value>पासवर्ड की पुष्टि कीजिये</value>
+  </data>
   <data name="Create New" xml:space="preserve">
     <value>नया बनाओ</value>
   </data>
@@ -140,6 +143,12 @@
   </data>
   <data name="Edit" xml:space="preserve">
     <value>संपादित करें</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>ईमेल</value>
+  </data>
+  <data name="First Name" xml:space="preserve">
+    <value>पहला नाम</value>
   </data>
   <data name="Gallery" xml:space="preserve">
     <value>गेलरी</value>
@@ -153,8 +162,14 @@
   <data name="Language" xml:space="preserve">
     <value>भाषा: हिन्दी</value>
   </data>
+  <data name="Last Name" xml:space="preserve">
+    <value>अंतिम नाम</value>
+  </data>
   <data name="List of Books" xml:space="preserve">
     <value>पुस्तकों की सूची</value>
+  </data>
+  <data name="Log In" xml:space="preserve">
+    <value>लॉग इन करें</value>
   </data>
   <data name="Logout" xml:space="preserve">
     <value>लॉग आउट</value>
@@ -165,10 +180,34 @@
   <data name="Privacy" xml:space="preserve">
     <value>एकांत</value>
   </data>
+  <data name="Privacy Policy" xml:space="preserve">
+    <value>गोपनीयता नीति</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>रजिस्टर करें</value>
+  </data>
+  <data name="Register as a new user" xml:space="preserve">
+    <value>एक नए उपयोगकर्ता के रूप में पंजीकरण करें</value>
+  </data>
+  <data name="Remember me?" xml:space="preserve">
+    <value>मुझे याद रखना?</value>
+  </data>
   <data name="Save" xml:space="preserve">
     <value>सहेजें</value>
   </data>
+  <data name="The FirstName field is required." xml:space="preserve">
+    <value>पहला नाम फ़ील्ड आवश्यक है।</value>
+  </data>
+  <data name="The Password field is required." xml:space="preserve">
+    <value>पासवर्ड फ़ील्ड आवश्यक है।</value>
+  </data>
+  <data name="Use this page to detail your site's privacy policy." xml:space="preserve">
+    <value>अपनी साइट की गोपनीयता नीति का विस्तार करने के लिए इस पृष्ठ का उपयोग करें।</value>
+  </data>
   <data name="Welcome to B&amp;T BookStore" xml:space="preserve">
     <value>बी &amp; टी बुकस्टोर में आपका स्वागत है</value>
+  </data>
+  <data name="You have successfully logged out of the application." xml:space="preserve">
+    <value>आपने एप्लिकेशन से सफलतापूर्वक लॉग आउट कर लिया है।</value>
   </data>
 </root>

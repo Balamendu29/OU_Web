@@ -156,8 +156,8 @@
   <data name="Upload ImageFile" xml:space="preserve">
     <value>télécharger un fichier image</value>
   </data>
-  <data name="Year must be numeric with 4-digits from 1000 to 2999. For example 2020" xml:space="preserve">
-    <value>L'année doit être numérique avec 4 chiffres de 1000 à 2999. Par exemple 2020</value>
+  <data name="Year must be numeric with 4-digits from 1000 to current year. For example 2020" xml:space="preserve">
+    <value>L'année doit être numérique avec 4 chiffres de 1000 à l'année en cours. Par exemple 2020</value>
   </data>
   <data name="Year Written" xml:space="preserve">
     <value>Année écrite</value>

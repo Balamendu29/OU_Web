@@ -120,22 +120,43 @@
   <data name="Author" xml:space="preserve">
     <value>రచయిత</value>
   </data>
+  <data name="Author is required" xml:space="preserve">
+    <value>రచయిత అవసరం</value>
+  </data>
   <data name="Created Date" xml:space="preserve">
     <value>సృష్టించిన తేదీ</value>
   </data>
   <data name="Edition" xml:space="preserve">
     <value>ఎడిషన్</value>
   </data>
+  <data name="Only letters, numbers, and commas are allowed." xml:space="preserve">
+    <value>అక్షరాలు, సంఖ్యలు మరియు కామాలతో మాత్రమే అనుమతించబడతాయి.</value>
+  </data>
+  <data name="Only numbers, commas and periods are allowed." xml:space="preserve">
+    <value>సంఖ్యలు, కామాలు మరియు కాలాలు మాత్రమే అనుమతించబడతాయి.</value>
+  </data>
   <data name="Price" xml:space="preserve">
     <value>ధర</value>
+  </data>
+  <data name="Price is required." xml:space="preserve">
+    <value>ధర అవసరం.</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>శీర్షిక</value>
   </data>
+  <data name="Title is required." xml:space="preserve">
+    <value>శీర్షిక అవసరం.</value>
+  </data>
   <data name="Upload ImageFile" xml:space="preserve">
     <value>చిత్రం అప్‌లోడ్ </value>
   </data>
+  <data name="Year must be numeric with 4-digits from 1000 to current year. For example 2020" xml:space="preserve">
+    <value>సంవత్సరం 1000 నుండి ప్రస్తుత సంవత్సరం వరకు 4 అంకెలతో సంఖ్యాపరంగా ఉండాలి. ఉదాహరణకు 2020</value>
+  </data>
   <data name="Year Written" xml:space="preserve">
     <value>వ్రాసిన సంవత్సరం</value>
+  </data>
+  <data name="Year Written is required, for example 2020." xml:space="preserve">
+    <value>వ్రాసిన సంవత్సరం అవసరం, ఉదాహరణకు 2020.</value>
   </data>
 </root>
